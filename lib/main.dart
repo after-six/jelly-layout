@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           color: Colors.yellow,
-          child: Column(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Icon(Icons.star, size: 50),
