@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           color: Colors.yellow,
           child: Row(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.max,
             children: <Widget>[
               Icon(Icons.star, size: 50),
               Icon(Icons.star, size: 50),
