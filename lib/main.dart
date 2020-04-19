@@ -18,24 +18,26 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Jelly layout"),
         ),
-        body: LayoutBuilder(
-          builder: (context, constraints) =>
-              Stack(
-                fit: StackFit.expand,
-                children: <Widget>[
-                  Material(color: Colors.yellowAccent),
-                  Positioned(
-                    top: 0,
-                    child: Icon(Icons.star, size: iconSize),
-                  ),
-                  Positioned(
-                    top: constraints.maxHeight - iconSize,
-                    left: constraints.maxWidth - iconSize,
-                    child: Icon(Icons.call, size: iconSize),
-                  ),
-                ],
-              ),
-        ),
+        body: Row(children: <Widget>[
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(color: Colors.red),
+            ),
+            flex: 3,
+          ),
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(color: Colors.green),
+            ),
+            flex: 2,
+          ),
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(color: Colors.yellow),
+            ),
+            flex: 1,
+          )
+        ]),
       ),
     );
   }
