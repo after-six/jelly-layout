@@ -19,10 +19,14 @@ class MyApp extends StatelessWidget {
           title: Text("Jelly layout"),
         ),
         body: Container(
-          color: Colors.yellowAccent,
+          height: double.infinity,
+          width: double.infinity,
+          decoration: BoxDecoration(color: Colors.yellowAccent),
+          foregroundDecoration: BoxDecoration(
+            color: Colors.red.withOpacity(0.5),
+          ),
           child: Text("Hi"),
         ),
-
       ),
     );
   }
