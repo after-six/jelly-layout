@@ -16,15 +16,16 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Jelly layout"),
         ),
-        body: Container(
-          color: Colors.yellow,
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Icon(Icons.star, size: 50),
-              Icon(Icons.star, size: 50),
-              Icon(Icons.star, size: 50),
-            ],
+        body: Center(
+          child: IntrinsicWidth(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                RaisedButton(onPressed: () {}, child: Text('Short')),
+                RaisedButton(onPressed: () {}, child: Text('A BitLonger')),
+                RaisedButton(onPressed: () {}, child: Text('The longest text button')),
+              ],
+            ),
           ),
         ),
       ),
