@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         body: Container(
           color: Colors.yellow,
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Icon(Icons.star, size: 50),
               Icon(Icons.star, size: 200),
