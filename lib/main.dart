@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           color: Colors.yellow,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic,
             children: <Widget>[
-              Icon(Icons.star, size: 50),
-              Icon(Icons.star, size: 50),
-              Icon(Icons.star, size: 50),
+              Text('Baseline', style: Theme.of(context).textTheme.headline3),
+              Text('Baseline', style: Theme.of(context).textTheme.bodyText1),
             ],
           ),
         ),
