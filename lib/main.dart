@@ -18,12 +18,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Jelly layout"),
         ),
-        body: ConstrainedBox(
-          constraints: BoxConstraints.expand(),
-          child: const Card(
-            child: const Text('Hello World!'),
-            color: Colors.yellow,
-          ),
+        body: Container(
+          color: Colors.yellowAccent,
+          child: Text("Hi"),
         ),
 
       ),
