@@ -7,6 +7,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    const iconSize = 50.0;
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -16,17 +18,23 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Jelly layout"),
         ),
-        body: Center(
-          child: IntrinsicWidth(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                RaisedButton(onPressed: () {}, child: Text('Short')),
-                RaisedButton(onPressed: () {}, child: Text('A BitLonger')),
-                RaisedButton(onPressed: () {}, child: Text('The longest text button')),
-              ],
-            ),
-          ),
+        body: LayoutBuilder(
+          builder: (context, constraints) =>
+              Stack(
+                fit: StackFit.expand,
+                children: <Widget>[
+                  Material(color: Colors.yellowAccent),
+                  Positioned(
+                    top: 0,
+                    child: Icon(Icons.star, size: iconSize),
+                  ),
+                  Positioned(
+                    top: constraints.maxHeight - iconSize,
+                    left: constraints.maxWidth - iconSize,
+                    child: Icon(Icons.call, size: iconSize),
+                  ),
+                ],
+              ),
         ),
       ),
     );
