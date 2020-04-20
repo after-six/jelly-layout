@@ -20,17 +20,19 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Jelly layout"),
         ),
-        body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          decoration: BoxDecoration(color: Colors.yellowAccent),
-          transform: Matrix4.rotationZ(pi / 4),
-          foregroundDecoration: BoxDecoration(
-            color: Colors.red.withOpacity(0.5),
-          ),
-          child: Text(
-            "Hi",
-            textAlign: TextAlign.center,
+        body: Center(
+          child: Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+              color: Colors.yellow,
+              image: DecorationImage(
+                fit: BoxFit.fitWidth,
+                image: NetworkImage(
+                  'https://flutter.io/images/catalog-widget-placeholder.png',
+                ),
+              ),
+            ),
           ),
         ),
       ),
