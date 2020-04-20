@@ -20,11 +20,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Jelly layout"),
         ),
-        body: SizedBox.expand(
-          child: Card(
-            child: Text('Hello World!'),
-            color: Colors.yellowAccent,
-          ),
+        body:Column(
+          children: <Widget>[
+            Icon(Icons.star, size: 50),
+            const SizedBox(height: 100),
+            Icon(Icons.star, size: 50),
+            Icon(Icons.star, size: 50),
+          ],
         ),
       ),
     );
